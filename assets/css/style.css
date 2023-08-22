@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Khand&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
+
+
+
+
+:root {
+  
+  --text-100: #ffffff;
+  --text-200: #e0e0e0;
+  --bg-100: #1e1e1e;
+  --bg-200: #2d2d2d;
+  --bg-200: #454545;
+  
+  
+  --accent-100: #01be53;
+  --accent-200: #00a347;
+  --bg-100: #0D1117;
+  --bg-300: #30363d;
+}
+
+/* Main color pallete: #0E1A1E / #AFDD4D / #FFFFFF */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-100);
+  color: var(--text-200);
+  font-size: 1rem;
+}
+
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 3rem 1rem 1rem;
+}
+
+.container .menu {
+  background-color: var(--bg-300);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: .5rem;
+  padding: .3rem 1.2rem;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  max-width: 70rem;
+  margin: 0 auto;
+  z-index: 99;
+}
+
+.container .menu .menuRight {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+.container .menu .menuLeft {
+  padding: .2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:.5rem;
+}
+
+.home2 {
+  padding-top: 4px;
+}
+
+.home3 {
+  filter: drop-shadow(1px 1px 1px #0D1117);
+}
+
+.menuLeft .home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px #0D1117;
+  color: #AFDD4D;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Khand Condensed', cursive;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Nanum Pen Script', cursive;
+}
+
+
+.iconHome {
+  transition: all .3s ease;
+}
+
+.iconHome:hover {
+  transform: scale(1.1);
+}
+
+.menuRight .hash {
+  color: #AFDD4D;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.menu .logotipo img {
+  height: 3rem;
+  rotate: -90deg;
+  margin-left: 1rem;
+  margin-top: 0.25rem;
+}
+
+.menu .menuRight a {
+  text-decoration: none;
+  list-style: none;
+  color: var(--text-200);
+}
+
+.menu .menuRight a:hover {
+  color: var(--text-100);
+}
+
+.menuRight .heart {
+  gap: 2px;
+  margin-right: 1rem;
+}
+
+.menu .menuBtn {
+  border: none;
+  height: 25px;
+  display: none;
+  margin-right: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.menu .menuBtn .menuMobile {
+  position: relative;
+  width: 30px;
+  background-color: var(--text-200);
+  transition: all 0.5s ease-in;
+  height: 3px;
+}
+
+.menu .menuBtn .menuMobile::after,
+.menu .menuBtn .menuMobile::before {
+  content: '';
+  width: 30px;
+  position: absolute;
+  background-color: var(--text-200);
+  left: 0;
+  height: 3px;
+  transition: all 0.5s ease-in;
+  transform: rotate(0);
+}
+
+.menu .menuBtn .menuMobile::after {
+  top: -8px;
+}
+
+.menu .menuBtn .menuMobile::before {
+  top: 8px;
+}
+
+.menuBtn:hover .menuMobile {
+  background-color: transparent;
+}
+
+.menuBtn:hover .menuMobile::after {
+  transform: rotate(45deg);
+  top: 0px;
+}
+
+.menuBtn:hover .menuMobile::before {
+  transform: rotate(-45deg);
+  top: 0px;
+}
+
+.container .menu .menuLink {
+  padding-bottom: 0.2rem;
+  position: relative;
+}
+
+.menuLink:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #AFDD4D;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.menuLink:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.container .title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 0;
+  text-align: center;
+  gap: 2rem;
+}
+
+.container .title h1 {
+  text-transform: uppercase;
+}
+
+.mainPassword {
+  width: 100%;
+}
+
+.mainPassword .password {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.passwordBox {
+  border: 1px solid var(--text-200);
+  /* padding: 1rem 0.5rem; */
+  border-radius: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.container .passwordBox #password {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: var(--bg-100);
+  font-size: 1.2rem;
+  border-bottom: 1px solid var(--text-200);
+  color: var(--text-200);
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.password .icons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1rem;
+  background-color: transparent;
+  padding: 0.7rem 1.2rem;
+  border: 1px solid #AFDD4D;
+  border-radius: 0.6rem;
+  color: #082505;
+  font-weight: 600;
+  transition: all 0.25s ease-in-out;
+  margin: .1rem auto;
+}
+
+.container #copyPassword {
+  cursor: pointer;
+  color: #AFDD4D;
+}
+
+.container #copyPassword .imgCopy {
+  transition: all .3s ease;
+}
+.container #copyPassword:hover .imgCopy {
+  animation: reduzirIcon .7s ;
+}
+
+@keyframes reduzirIcon {
+  0% {
+    transform: scale(.2);
+  }
+  
+}
+
+/* .password .icons:hover {
+  transition: all 0.25s ease-in-out;
+  background-color: var(--accent-200);
+} */
+
+.barIndicator .bar {
+  padding: 0.7rem 0.5rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  transition: all 0.35s ease-in;
+  width: 7rem;
+  text-align: center;
+}
+
+.barIndicator .bar.completed {
+  transition: all 0.35s ease-in;
+}
+
+.barIndicator .bar.critical {
+  background-color: #c93f3f;
+  transition: all 0.35s ease-in;
+}
+.barIndicator .bar.warning {
+  background-color: #cea731;
+  transition: all 0.35s ease-in;
+}
+
+.barIndicator .bar.safe {
+  background-color: #188d43;
+  transition: all 0.35s ease-in;
+}
+
+.barIndicator .bar.completed {
+  background-color: #165991;
+  transition: all 0.35s ease-in;
+}
+
+.container .btnAtualizar {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: var(--text-200);
+}
+
+
+
+.container .mainPersonlizar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-300);
+  color: var(--text-200);
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+}
+
+.mainPersonlizar .checkbox {
+  display: flex;
+  gap: 1.2rem;
+}
+
+#passwordLength {
+  width: 20rem;
+}
+
+#passwordLength,
+#lowcaseCheck,
+#uppercaseCheck,
+#specialCheck {
+  accent-color: var(--text-200);
+}
+
+.dica {
+  text-align: center;
+  width: 95%;
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 50rem) {
+  .container .menu .menuRight {
+    display: none;
+  }
+
+  .menu .menuBtn {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  .mainPassword .password {
+    display: flex;
+    margin: 1.2rem auto;
+    padding: 2px;
+    width: 70%;
+  }
+  
+  .passwordBox {
+    flex-direction: row;
+    padding: 0 1.2rem;
+    width: 70%;
+    margin: 0 auto;
+  }
+}

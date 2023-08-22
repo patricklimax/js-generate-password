@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Senha</title>
+  <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <main class="container">
+
+    <nav class="menu">
+      <ul class="menuLeft">
+        <a class="home" href="">
+          <lord-icon class="home3" src="https://cdn.lordicon.com/gmzxduhd.json" trigger="hover"
+            colors="primary:#AFDD4D,secondary:#ffffff" stroke="100" style="width:40px;height:40px">
+          </lord-icon>
+          <a class="home home2" href="">AZ APPWeb</a>
+        </a>
+      </ul>
+      <button class="menuBtn">
+        <div class="menuMobile"></div>
+      </button>
+      <ul class="menuRight">
+        <li>
+          <a class="menuLink heart" href="">
+            <span class="hash">//</span> Aplicações
+          </a>
+        </li>
+        <li>
+          <a class="menuLink heart" href="">
+            <span class="hash">//</span> Contato
+          </a>
+        </li>
+        <li>
+          <a class="menuLink heart" href="">
+            <span class="hash">//</span> Doe
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="title">
+      <h1>Gerador de Senha</h1>
+      <p>
+        Utilize o nosso gerador de senha online para criar senhas fortes e seguras.
+      </p>
+    </div>
+
+    <div class="mainPassword">
+      <div class="password">
+        <div class="passwordBox">
+          <input type="text" name="password" id="password" value="1234567">
+          <div class="barIndicator">
+            <div class="bar critical" id="barIndicatorBar">
+              <p class="statusSenha">Muito fraca</p>
+            </div>
+          </div>
+          <button class="btnAtualizar">
+            <lord-icon onclick="generationPassword()" src="https://cdn.lordicon.com/krmfspeu.json" trigger="hover"
+              colors="primary:#AFDD4D,secondary:#ffffff" stroke="120" style="width:35px;height:35px">
+            </lord-icon>
+          </button>
+        </div>
+
+        <button class="icons" id="copyPassword" onclick="copyPassword()">
+          <img class="imgCopy" src="assets/icons/copy.svg" alt="ícone copiar">
+          <p>Copiar Senha</p>
+        </button>
+      </div>
+    </div>
+    <div class="mainPersonlizar">
+      <h1>Personalizar</h1>
+      <p>Tamanho da senha: <span id="passwordLengthText">7</span> caracteres</p>
+      <input type="range" name="passwordLength" id="passwordLength" value="7" min="1" max="50">
+      <div class="checkbox">
+        <div class="checkbox2">
+          <input type="checkbox" name="" id="lowcaseCheck">
+          <label for="">
+            Minúscula
+          </label>
+        </div>
+        <div class="checkbox1">
+          <input type="checkbox" name="" id="uppercaseCheck">
+          <label for="">Maiúscula</label>
+        </div>
+        <div class="checkbox4">
+          <input type="checkbox" name="" id="specialCheck">
+          <label for="">Símbolos</label>
+        </div>
+      </div>
+      <p class="dica">Para senhas com maior segurança, utilize letras minúsculas, maiúsculas e caracteres especiais.
+        Além disso, escolha senhas de 10 caracteres ou mais.</p>
+    </div>
+
+  </main>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
